@@ -119,38 +119,36 @@ function validateForm() {
     // // ==============================================7== ton pays=====================================
 
     // // var varpays=document.getElementById("fpays").value;
-    // if (varpays == "") {
-    //     document.getElementById("commentaire7").innerHTML = "vide pays";
-    // }
-    // else if (pattern.test(varpays) === false) {
-    //     document.getElementById("commentaire7").innerHTML = "non conforme:" + varpays;
-    // }
-    // else {
-    //     document.getElementById("commentaire7").innerHTML = "conforme votre pays :" + varpays;
-    //     document.getElementById("commentaire7").style.color = "black";
-    // }
+    if (varpays == "") {
+        document.getElementById("commentaire7").innerHTML = "vide pays";
+    }
+    else if (pattern.test(varpays) === false) {
+        document.getElementById("commentaire7").innerHTML = "non conforme:";
+    }
+    else {
+        document.getElementById("commentaire7").innerHTML = "conforme votre pays :" + varpays;
+        document.getElementById("commentaire7").style.color = "black";
+    }
 
     // // ===============================================8 favoris=====================================
 
-    // // var varfavoris=document.getElementById("paysselect").value;
-    // if (varfavoris == "") { document.getElementById("commentaire8").innerHTML = "moi vide" }
-    // else {
-    //     document.getElementById("commentaire8").innerHTML = "selection est :" + varfavoris;
-    //     document.getElementById("commentaire8").style.color = "black";
-    // }
-    // // ===============================================8 favoris=====================================
+    if (varfavoris == "") { document.getElementById("commentaire8").innerHTML = "moi vide" }
+    else {
+        document.getElementById("commentaire8").innerHTML = "selection est :" + varfavoris;
+        document.getElementById("commentaire8").style.color = "black";
+    }
+    // // ===============================================8 sujet =====================================
 
-    // // var varsujet=document.getElementById("fsujet").value;
-    // if (varsujet == "") { document.getElementById("commentaire9").innerHTML = "sujet pas" }
+    if (varsujet == "") { document.getElementById("commentaire9").innerHTML = "sujet pas" }
 
-    // else if (pattern.test(varsujet) === false) {
-    //     document.getElementById("commentaire9").innerHTML = "non conforme:" + varsujet;
-    // }
-    // else if (varsujet.length < 50) {
-    //     document.getElementById("commentaire9").innerHTML = "il faut rentrer au minimum 50 caracteres ";
-    // }
-    // else {
-    //     document.getElementById("commentaire9").innerHTML = "votre sujet " + varsujet
-    //     document.getElementById("commentaire9").style.color = "black";
-    // }
+    else if (pattern.test(varsujet) === false) {
+        document.getElementById("commentaire9").innerHTML = "non conforme:" + varsujet;
+    }
+    else if (varsujet.length < 50) {
+        document.getElementById("commentaire9").innerHTML = "il faut rentrer au minimum 50 caracteres ";
+    }
+    else {
+        document.getElementById("commentaire9").innerHTML = "votre sujet " + varsujet
+        document.getElementById("commentaire9").style.color = "black";
+    }
 }   
