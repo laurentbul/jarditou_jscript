@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript</title>
+
+ 
+</head>
+
+<body>
+
+    <h2>Fomulaire de contact</h2>
+    <div class="container">
+        <form >
+            
+==============================================1 nom===========================================================================
+<div class="row">
+
+    <div class="col-25">
+        <label>Nom*:</label>
+
+    </div>
+
+    <input type="text" id="fname" onfocus="this.value=''"  value="" placeholder="votre nom de famille..">
+
+    <div id="commentaire1">votre prenom est : </div>
+
+</div>
+
+<input type="button" onclick="nom()" value="btnnom"></div>
+
+<script>
+    function nom(){
+        let patternnumber=/^\d+$/
+        let pattern=/^[a-zA-Z\s]+$/;
+        let result = pattern.test(vnom);
+        var vnom=document.getElementById("fname").value;
+        if(vnom==""){
+            document.getElementById("commentaire1").innerHTML="vous avez pas entrer votre nom!";
+        }
+        else if(pattern.test(vnom) === false){
+            document.getElementById("commentaire1").innerHTML="non conforme:";
+        }
+        else{document.getElementById("commentaire1").innerHTML="conforme votre pays :" + vnom;}
+    }
+
+</script>
+            
+===============================================2==========================================================================
+
+
+            <div class="row">
+
+                <div class="col-25">
+                    <label>Prenom*:</label>
+
+                </div>
+
+                <input type="text" id="fprenom" placeholder="votre nom de famille..">
+
+                <div id="commentaire2">j'attends ton prenom.... </div>
+
+            </div>
+            <input type="button" onclick="prenom()" value="btnPrenom">
+
+            <script>
+                
+                function prenom(){
+                 vprenom=document.getElementById("fprenom").value; 
+                 if(vprenom == "")  {
+                    document.getElementById("commentaire2").innerHTML="vous avez pas entrer de valeur";
+                 }
+                 else{
+                    document.getElementById("commentaire2").innerHTML="hello :" + vprenom;
+                 }
+                }
+
+            </script>
+            
+=================================================3=======================================================================<br>
+
+            <div class="row">
+
+                <div class="col-25">
+                    <label> Date de naissance *:</label>
+                </div>
+
+                <input type="date" id="fdtn" placeholder="votre nom de famille..">
+
+                <div id="commentaire3">j'attends votre date de naissance</div>
+                <input type="button" onclick="dtn()" value="btn-dtn()">
+            </div>
+
+            <script>
+            function dtn(){
+
+           
+            vardtn=document.getElementById("fdtn").value;
+            if(vardtn==""){
+                document.getElementById("commentaire3").innerHTML="no no";
+            }
+            else{
+                document.getElementById("commentaire3").innerHTML="oui :" + vardtn;
+            }
+        }
+            </script>
+            
+===============================================4=========================================================================<br>
+<div class="row">
+            <div class="col-25">
+                <label> ville *:</label>
+            </div>
+
+            <input type="text" id="fville" placeholder="votre nom de famille..">
+
+            <div id="commentaire4">j'attends votre ville</div>
+            <input type="button" onclick="ville()" value="btnvile">
+        </div>
+<script>
+
+function ville(){
+
+var varville= document.getElementById("fville").value;
+
+if(varville == ""){
+    document.getElementById("commentaire4").innerHTML = "vide vide";
+}
+else{
+    document.getElementById("commentaire4").innerHTML="oui :" + varville;
+}
+}
+
+</script>
+            
+=============================================5===========================================================================<br>
+<div class="row">
+    <div class="col-25">
+        <label> adresse *:</label>
+    </div>
+
+    <input type="text" id="fadresse" placeholder="votre nom de famille..">
+
+    <div id="commentaire5">j'attends votre adresse</div>
+
+    <input type="button" onclick="adresse()" value="btnadresse">
+
+</div>
+
+<script>
+    function adresse(){
+        var varadresse=document.getElementById("fadresse").value;
+
+        if(varadresse==""){
+
+            document.getElementById("commentaire5").innerHTML="adresse boxe vide";
+        }
+
+        else{
+            document.getElementById("commentaire5").innerHTML="hello :" + varadresse;
+        }
+    }
+
+</script>
+===================================================6=====================================================================<br>
+<div class="row">
+    <div class="col-25">
+        <label> Code postal *:</label>
+    </div>
+
+    <input type="number" id="fcodepostal" placeholder="votre nom de famille..">
+
+    <div id="commentaire6">j'attends votre code postal</div>
+
+    <input type="button" onclick="cdpost()" value="btncdpostal">
+
+</div>
+<script>
+
+    function cdpost(){
+        var varcdpost=document.getElementById("fcodepostal").value;
+        if(varcdpost==""){
+            document.getElementById("commentaire6").innerHTML="cdp vide";
+
+        }
+        else{
+            document.getElementById("commentaire6").innerHTML= "votre codepostale :" + varcdpost;
+        }
+    }
+</script>            
+===================================================7=====================================================================<br>
+<div class="row">
+<div class="col-25">
+                <label> Pays *:</label>
+            </div>
+
+            <input type="text" id="fpays" placeholder="votre nom de famille..">
+
+            <div id="commentaire7">j'attends votre pays</div>
+            <input type="button"  onclick="pays()" value="btnpays">
+        </div>
+
+        <script>
+            function pays(){
+                let patternnumber=/^\d+$/
+                let pattern=/^[a-zA-Z\s]+$/;
+                let result = pattern.test(varpays);
+                var varpays=document.getElementById("fpays").value;
+                if(varpays==""){
+                    document.getElementById("commentaire7").innerHTML="vide pays";
+                }
+                else if(pattern.test(varpays) === false){
+                    document.getElementById("commentaire7").innerHTML="non conforme:"+ varpays;
+                }
+                else{document.getElementById("commentaire7").innerHTML="conforme votre pays :" + varpays;}
+            }
+
+        </script>
+            
+================================================8========================================================================<br>
+<div class="row">
+            <div class="col-25">
+                <label> favoris:</label>
+            </div>
+            <select id="paysselect">
+                <option>france</option>
+                <option>allemagne</option>
+                <option>brezil</option>
+                <option>japon</option>
+            </select>
+
+            <div id="commentaire8">j'attends votre sujet</div>
+            <input  type="button" onclick="selectfavoris()" value="selectfavoris()">
+ </div>
+
+ <script>
+    function selectfavoris(){
+var varfavoris=document.getElementById("paysselect").value;
+if(varfavoris==""){document.getElementById("commentaire8").innerHTML="moi vide"}
+else{document.getElementById("commentaire8").innerHTML="selection est :"+varfavoris;}
+}
+ </script>
+            
+=================================================9=======================================================================<br>
+<div class="row">
+<div class="col-25">
+    <label> Sujet *:</label>
+</div>
+
+<textarea id="fsujet" name="fsujet" placeholder="Write something.." style="height: 200px; width: 100%;"></textarea>
+
+<div id="commentaire9">j'attends votre sujet</div>
+<input  type="button" onclick="sujet()" value="btnsujet()">
+</div>
+
+<script>
+function sujet(){
+    var varsujet=document.getElementById("fsujet").value;
+    if(varsujet==""){document.getElementById("commentaire9").innerHTML="sujet pas"}
+    else{document.getElementById("commentaire9").innerHTML="votre sujet " + varsujet}
+
+}
+
+</script>
+========================================================================================================================<br>
+
+            <input type="button" onclick="validateForm()" value="Valider form">
+            
+   
+
+
+    </form>
+
+
+
+    
+    </div>
+    <script>
+        function validateForm() {
+            vnom = document.getElementById("fname").value;
+            vprenom=document.getElementById("fprenom").value; 
+            vardtn=document.getElementById("fdtn").value;
+            var varville= document.getElementById("fville").value;
+            var varadresse=document.getElementById("fadresse").value;
+            var varcdpost=document.getElementById("fcodepostal").value;
+            var varpays=document.getElementById("fpays").value;
+            var varfavoris=document.getElementById("paysselect").value;
+            var varsujet=document.getElementById("fsujet").value;
+// =============================================1=== ton nom =====================================
+       // vnom = document.getElementById("fname").value;
+        if (vnom == "") {
+            document.getElementById("commentaire1").innerHTML = "vous avez pas entrer votre nom !";
+        }
+        else{
+            document.getElementById("commentaire1").innerHTML = "Bonjour votre nom c'est bien ? :" + vnom ; 
+        }
+    
+
+
+// ============================================2==== ton prenom =====================================
+
+        // vprenom=document.getElementById("fprenom").value; 
+        if(vprenom == "")  {
+        document.getElementById("commentaire2").innerHTML="vous avez pas entrer de valeur";
+        }
+        else{
+        document.getElementById("commentaire2").innerHTML="hello :" + vprenom;
+        }
+             
+// ===========================================3===== ta date de naissance =====================================
+
+           
+        // vardtn=document.getElementById("fdtn").value;
+        if(vardtn==""){
+            document.getElementById("commentaire3").innerHTML="no no";
+        }
+        else{
+            document.getElementById("commentaire3").innerHTML="oui :" + vardtn;
+        }
+      
+            
+// ============================================4==== ta ville =====================================
+
+        // var varville= document.getElementById("fville").value;
+
+        if(varville == ""){
+            document.getElementById("commentaire4").innerHTML = "vide vide";
+        }
+        else{
+            document.getElementById("commentaire4").innerHTML="oui :" + varville;
+        }
+       
+// =========================================5======= ton adresse=====================================
+               
+        // var varadresse=document.getElementById("fadresse").value;
+
+        if(varadresse==""){
+
+            document.getElementById("commentaire5").innerHTML="adresse boxe vide";
+        }
+
+        else{
+            document.getElementById("commentaire5").innerHTML="hello :" + varadresse;
+        }
+   
+// =============================================6=== ton code postale=====================================
+
+        // var varcdpost=document.getElementById("fcodepostal").value;
+        if(varcdpost==""){
+            document.getElementById("commentaire6").innerHTML="cdp vide";
+
+        }
+        else{
+            document.getElementById("commentaire6").innerHTML= "votre codepostale :" + varcdpost;
+        }
+    
+// ==============================================7== ton pays=====================================
+
+    
+        let patternnumber=/^\d+$/
+        let pattern=/^[a-zA-Z\s]+$/;
+        let result = pattern.test(varpays);
+        // var varpays=document.getElementById("fpays").value;
+        if(varpays==""){
+            document.getElementById("commentaire7").innerHTML="vide pays";
+        }
+        else if(pattern.test(varpays) === false){
+            document.getElementById("commentaire7").innerHTML="non conforme:"+ varpays;
+        }
+        else{document.getElementById("commentaire7").innerHTML="conforme votre pays :" + varpays;}
+    
+// ===============================================8 favoris=====================================
+
+        // var varfavoris=document.getElementById("paysselect").value;
+        if(varfavoris==""){document.getElementById("commentaire8").innerHTML="moi vide"}
+        else{document.getElementById("commentaire8").innerHTML="selection est :"+varfavoris;}
+// ===============================================8 favoris=====================================
+
+    // var varsujet=document.getElementById("fsujet").value;
+    if(varsujet==""){document.getElementById("commentaire9").innerHTML="sujet pas"}
+    else{document.getElementById("commentaire9").innerHTML="votre sujet " + varsujet}
+
+
+
+    }   
+    </script>
+</body></html>
